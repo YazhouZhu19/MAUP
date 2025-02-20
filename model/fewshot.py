@@ -189,7 +189,7 @@ class FewShotSeg(nn.Module):
         point_labels = np.concatenate([np.ones(len(positive_points)), np.zeros(len(negative_points))], axis=0)
 
         return input_points, point_labels
-
+        
     def getPred(self, fts, prototype):
         """Compute cosine similarity between features and prototype."""
         sim = F.cosine_similarity(fts, prototype[..., None, None], dim=1) * self.scaler
