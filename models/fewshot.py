@@ -17,7 +17,7 @@ class FewShotSeg(nn.Module):
         self.fg_num = 40  # Number of foreground partitions
 
         # Load and setup SAM model
-        self.SAM = sam_model_registry['vit_h'](checkpoint="/home/cs4007/data/zyz/CDFSMIS/checkpoints/sam_vit_h_4b8939.pth")
+        self.SAM = sam_model_registry['vit_h'](checkpoint=".../sam_vit_h_4b8939.pth")
         self.SAM = self.SAM.eval()  # Set SAM to evaluation mode
         self.SAM_Encoder = self.SAM.image_encoder.eval()  # SAM image encoder
         self.SAM_Predictor = SamPredictor(self.SAM)  # SAM predictor
