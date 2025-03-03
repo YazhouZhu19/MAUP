@@ -299,12 +299,3 @@ class FewShotSeg(nn.Module):
         fg_proto = torch.stack(batch_fg_protos, dim=0).transpose(1, 2)
         return fg_proto
 
-# Example usage for testing
-if __name__ == "__main__":
-    model = FewShotSeg().cuda()
-    supp_imgs = [torch.randn(1, 1, 3, 256, 256).cuda()]  # Example support images
-    supp_mask = [torch.ones(1, 1, 256, 256).cuda()]      # Example support masks
-    qry_imgs = [torch.randn(1, 3, 256, 256).cuda()]      # Example query images
-    qry_mask = [torch.ones(1, 256, 256).cuda()]          # Example query masks
-    output = model(supp_imgs, supp_mask, qry_imgs, qry_mask)
-    print(output.shape)  # Expected output: torch.Size([1, 2, 256, 256])
