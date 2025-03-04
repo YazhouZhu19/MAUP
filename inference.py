@@ -158,8 +158,8 @@ def main(_run, _config, _log):
 
 
     def dict_Avg(Dict):
-        L = len(Dict)  # 取字典中键值对的个数
-        S = sum(Dict.values())  # 取字典中键对应值的总和
+        L = len(Dict)  
+        S = sum(Dict.values())  
         A = S / L
         return A
 
