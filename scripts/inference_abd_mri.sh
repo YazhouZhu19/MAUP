@@ -8,7 +8,7 @@ DATASET='ABDOMEN_MRI'
 NWORKER=16
 RUNS=1
 ALL_EV=(0 1 2 3 4) # 5-fold cross validation (0, 1, 2, 3, 4)
-TEST_LABEL=[1,2,3,6]
+TEST_LABEL=[1,2,3,4]
 ###### Training configs ######
 NSTEP=40000
 DECAY=0.98
