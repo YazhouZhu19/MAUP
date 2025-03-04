@@ -1,7 +1,3 @@
-"""
-Experiment configuration file
-Extended from config file from original PANet Repository
-"""
 import glob
 import itertools
 import os
