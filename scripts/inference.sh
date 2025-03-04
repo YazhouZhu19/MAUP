@@ -38,7 +38,7 @@ do
      for SUPP_IDX in "${ALL_SUPP[@]}"
      do
         # RELOAD_PATH='please feed the absolute path to the trained weights here' # path to the reloaded model
-        python3 test_sam_training_free.py with \
+        python3 inference.py with \
         mode="test" \
         dataset=$DATASET \
         num_workers=$NWORKER \
