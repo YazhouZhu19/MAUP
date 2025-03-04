@@ -20,7 +20,6 @@ SEED=2025
 N_PART=3 # defines the number of chunks for evaluation
 ALL_SUPP=(2) # CHAOST2: 0-4, CMR: 0-7
 model_id=(45000)
-output_file="sum_sam_training_free.txt"  
 echo ========================================================================
 for id in "${model_id[@]}"
 do
