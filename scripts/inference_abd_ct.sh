@@ -55,7 +55,6 @@ do
     done
 
     value=$(<results.txt)
-    #echo "累加结果是: $value"
     sum=$(echo "$sum + $value" | bc)
 
   done
