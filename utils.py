@@ -115,7 +115,7 @@ class Scores_new():
 
         self.patient_dice = []
         self.patient_iou = []
-        self.patient_hausdorff = []  # 新增
+        self.patient_hausdorff = [] 
 
     def record(self, preds, label):
         assert len(torch.unique(preds)) < 3
@@ -128,7 +128,6 @@ class Scores_new():
         self.patient_dice.append(2 * tp / (2 * tp + fp + fn))
         self.patient_iou.append(tp / (tp + fp + fn))
 
-        # 计算95% Hausdorff Distance
         hausdorff_dist = self.compute_95_hausdorff(preds, label)
         self.patient_hausdorff.append(hausdorff_dist)
 
@@ -141,25 +140,22 @@ class Scores_new():
         pred = pred.cpu().numpy()
         label = label.cpu().numpy()
 
-        # 确保pred和label是二维数组
         if pred.ndim > 2:
             pred = np.squeeze(pred)
         if label.ndim > 2:
             label = np.squeeze(label)
 
-        # 获取非零元素的坐标
         pred_points = np.array(np.nonzero(pred)).T
         label_points = np.array(np.nonzero(label)).T
 
         if len(pred_points) == 0 or len(label_points) == 0:
-            return 0  # 或者返回一个特定的值表示无法计算
+            return 0  
 
-        # 计算Hausdorff距离
         d1 = directed_hausdorff(pred_points, label_points)[0]
         d2 = directed_hausdorff(label_points, pred_points)[0]
 
         hausdorff_dist = max(d1, d2)
-        return hausdorff_dist  # 返回Hausdorff距离，不计算百分位数
+        return hausdorff_dist  
 
     def compute_dice(self):
         return 2 * self.TP / (2 * self.TP + self.FP + self.FN)
