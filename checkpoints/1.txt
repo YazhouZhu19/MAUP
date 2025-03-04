@@ -1,1 +1,2 @@
-# put checkpoints here 
+# put the pretrained DINOv2 here
+
