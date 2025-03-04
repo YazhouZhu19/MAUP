@@ -1,7 +1,3 @@
-"""
-Dataset for Training and Test
-Extended from ADNet code by Hansen et al.
-"""
 import torch
 import cv2
 from torch.utils.data import Dataset
@@ -95,10 +91,6 @@ class TestDataset(Dataset):
         lbl = sitk.GetArrayFromImage(
             sitk.ReadImage(img_path.split('image_')[0] + 'label_' + img_path.split('image_')[-1]))
 
-        # lbl = cv2.resize(lbl, (256, 256), interpolation=cv2.INTER_LINEAR)
-        # lbl = self.resize_array(lbl)
-
-
         lbl[lbl == 200] = 1
         lbl[lbl == 500] = 2
         lbl[lbl == 600] = 3
@@ -110,7 +102,6 @@ class TestDataset(Dataset):
         idx = lbl.sum(axis=(1, 2)) > 0
         sample['image'] = torch.from_numpy(img[idx])
         sample['label'] = torch.from_numpy(lbl[idx])
-
 
         return sample
 
