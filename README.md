@@ -49,7 +49,7 @@ Run `./script/inference_abd_ct.sh`
 #### Card-MRI
 Run `./script/inference_card_mri.sh`
 
-</div>
+
 
 
 
