@@ -36,6 +36,7 @@ segment-anything=1.0
 transformers=4.49.0
 ```
 
+</div>
 
 ## Inference 
 
