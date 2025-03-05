@@ -16,7 +16,7 @@ Cross-domain Few-shot Medical Image Segmentation (CD-FSMIS) is a potential solut
 
 </div>
 
-### Dependencies
+## Dependencies
 
 ```
 dcm2nii
@@ -36,11 +36,8 @@ segment-anything=1.0
 transformers=4.49.0
 ```
 
-</div>
 
-</div>
-
-### Inference 
+## Inference 
 
 #### Inference on Abd-MRI
 Run `./script/inference_abd_mri.sh` 
