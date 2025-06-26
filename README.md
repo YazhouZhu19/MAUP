@@ -9,7 +9,7 @@
 
 <p><strong> MICCAI 2025<strong></p>  
 
-<p align="center"><img width="95%" src="./overview.png" />
+
 
 
 </div>
@@ -20,6 +20,8 @@ Cross-domain Few-shot Medical Image Segmentation (CD-FSMIS) is a potential solut
 
 
 </div>
+
+<p align="center"><img width="95%" src="./overview.png" />
 
 ## Dependencies
 
