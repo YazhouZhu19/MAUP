@@ -7,6 +7,7 @@
  <em>Nanjing Univeristy of Science and Technology</em><br> 
 </p>
 
+<p><strong> MICCAI 2025<strong></p>  
 
 <p align="center"><img width="95%" src="./overview.png" />
 
