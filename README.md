@@ -1,9 +1,10 @@
 <div align="center">
 
-<h1>MAUP: Training-free Multi-center Adaptive Uncertainty-aware Prompting for Cross-domain Few-shot Medical Image Segmentation </h1>
+<h1>🚲MAUP: Training-free Multi-center Adaptive Uncertainty-aware Prompting for Cross-domain Few-shot Medical Image Segmentation </h1>
 
 <p>
- <strong>Yazhou Zhu<sup>*</sup> 
+ <strong>Yazhou Zhu, Haofeng Zhang<sup>*</sup>
+ 
 
 </p>
 
