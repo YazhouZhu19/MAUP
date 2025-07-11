@@ -60,9 +60,9 @@ class FewShotSeg(nn.Module):
         imgs_concat_sam = self.preprocess_batched_image_tensor(imgs_concat, self.SAM)
         
         # Extract features using SAM encoder
-        img_emdeddings = self.SAM_Encoder(imgs_concat_sam)
-        supp_embedding = img_emdeddings[:self.n_ways * self.n_shots * supp_bs].view(supp_bs, self.n_ways, self.n_shots, -1, *img_emdeddings.shape[-2:])
-        qry_embedding = img_emdeddings[self.n_ways * self.n_shots * supp_bs:].view(qry_bs, self.n_queries, -1, *img_emdeddings.shape[-2:])
+        # img_emdeddings = self.SAM_Encoder(imgs_concat_sam)
+        # supp_embedding = img_emdeddings[:self.n_ways * self.n_shots * supp_bs].view(supp_bs, self.n_ways, self.n_shots, -1, *img_emdeddings.shape[-2:])
+        # qry_embedding = img_emdeddings[self.n_ways * self.n_shots * supp_bs:].view(qry_bs, self.n_queries, -1, *img_emdeddings.shape[-2:])
 
         # Extract features using DINOv2
         outputs_dinov2 = self.dinov2(pixel_values=imgs_concat)
